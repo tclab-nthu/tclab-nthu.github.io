@@ -1,0 +1,376 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script> -->
+  <!-- <script> -->
+  <!--   window.dataLayer = window.dataLayer || []; -->
+  <!--   function gtag(){dataLayer.push(arguments);} -->
+  <!--   gtag('js', new Date()); -->
+
+  <!--   gtag('config', 'G-E00L9PT3V9'); -->
+  <!-- </script> -->
+  <title>{{ site.name }}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h1>
+                TCLAB
+              </h1>
+
+              <br>
+
+              <p>
+                本實驗室目前的研究方向主要分為兩大主軸:
+                <ol>
+                  <li>超大型積體電路設計領域中的實體設計自動化</li>
+                  <li>人工智慧安全領域中的深度學習網路之對抗式攻擊及防禦</li>
+                </ol>
+              </p>
+
+              <p style="text-align:center">
+                  <br>
+                <!-- <a target="_blank" href="mailto:tim.chenbw@gmail.com"> Email</a> &nbsp;/&nbsp; -->
+                詢問實驗室事宜請至 資電230
+                  <br>
+                <!-- <a href="https://github.com/bwbwchen">Professor</a> &nbsp;/&nbsp; -->
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img style="width:100%;max-width:100%;border-radius:50%" alt="profile photo" src="/images/professor-square.png">
+              <p style="text-align:center">Professor <a href="http://www.cs.nthu.edu.tw/~tcwang/">Ting-Chi Wang</a></p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Scrollbar code adapted from https://github.com/kkhetarpal/kkhetarpal.github.io/blob/master/index.html#L200 -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <h1>Highlights / News</h1>
+              <div class="container sidebar col-md-3">
+            <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"></h4>
+                </div>
+                <div class="panel-body" id="oScroll" >
+                <div id="scroll">
+
+                  <!-- ref: https://github.com/tsy935/tsy935.github.io/blob/2be8dfe1516b4b7ca451fcb3b2c7e6a8b06aac9a/_layouts/default.html#L86C39-L97 -->
+                {% for post in site.posts %}
+                {% for cat in post.categories %}
+                {% if cat == 'news' %}
+                  {{ post.excerpt }}
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+
+                </div>
+            </div>
+          </div>
+
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h1>Projects</h1>
+              <!-- <p> -->
+              <!--   Placement, Routing, etc. -->
+              <!-- </p> -->
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for proj in site.data.project %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{proj.image}}" alt="No image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{proj.title}}</h3>
+              <br>
+              <!-- {{post.authors}} -->
+
+              <br>
+              {{ proj.time }}
+              <br>
+              {% if proj.arxiv %}
+              <a href="{{proj.arxiv}}">arxiv</a> /
+              {% endif %}
+              {% if proj.article %}
+              <a href="{{proj.article}}">article</a> /
+              {% endif %}
+              {% if proj.doc %}
+              <a href="{{proj.doc}}">doc</a> /
+              {% endif %}
+              {% if proj.video %}
+              <a href="{{proj.video}}">video</a> /
+              {% endif %}
+              {% if proj.code %}
+              <a href="{{proj.code}}">code</a> /
+              {% endif %}
+              {% if proj.poster %}
+              <a href="{{proj.poster}}">poster</a> /
+              {% endif %}
+              {% if proj.slides %}
+              <a href="{{proj.slides}}">slides</a> /
+              {% endif %}
+              {% if proj.website %}
+              <a href="{{proj.website}}">website</a> /
+              {% endif %}
+              {% if proj.youtube %}
+              <a href="{{proj.youtube}}">youtube</a> /
+              {% endif %}
+              <p></p>
+              {{ proj.descript }}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h1>Professor</h1>
+              <!-- <p> -->
+              <!--   Placement, Routing, etc. -->
+              <!-- </p> -->
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/images/professor-square.png" alt="No image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>Ting-Chi Wang</h3>
+              <br>
+              <a href="mailto:tcwang@cs.nthu.edu.tw">email</a> /
+              <a href="http://www.cs.nthu.edu.tw/~tcwang/">website</a> /
+              <p></p>
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h1>People</h1>
+              <!-- <p> -->
+              <!--   Placement, Routing, etc. -->
+              <!-- </p> -->
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>PhD Students</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for pp in site.data.member-phd %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{pp.image}}" alt="No image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{pp.name}}</h3>
+              <br>
+              {% if pp.email %}
+              <a href="mailto:{{pp.email}}">email</a> /
+              {% endif %}
+              {% if pp.website %}
+              <a href="{{pp.website}}">website</a> /
+              {% endif %}
+              {% if pp.descript %}
+              <p></p>
+              {{ pp.descript }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Master Students - Year 2</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% assign sortedMemberYear2 = site.data.member-year2 | sort: "ad_year"%}
+          {% for pp in sortedMemberYear2 %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{pp.image}}" alt="No image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{pp.name}}</h3>
+              <br>
+              {% if pp.email %}
+              <a href="mailto:{{pp.email}}">email</a> /
+              {% endif %}
+              {% if pp.website %}
+              <a href="{{pp.website}}">website</a> /
+              {% endif %}
+              {% if pp.descript %}
+              <p></p>
+              {{ pp.descript }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Master Students - Year 1</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for pp in site.data.member-year1 %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{pp.image}}" alt="No image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{pp.name}}</h3>
+              <br>
+              {% if pp.email %}
+              <a href="mailto:{{pp.email}}">email</a> /
+              {% endif %}
+              {% if pp.website %}
+              <a href="{{pp.website}}">website</a> /
+              {% endif %}
+              {% if pp.descript %}
+              <p></p>
+              {{ pp.descript }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Alumni - PhD</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for pp in site.data.member-alumni-phd %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{pp.image}}" alt="No image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{pp.name}}</h3>
+              <br>
+              {% if pp.email %}
+              <a href="mailto:{{pp.email}}">email</a> /
+              {% endif %}
+              {% if pp.website %}
+              <a href="{{pp.website}}">website</a> /
+              {% endif %}
+              {% if pp.descript %}
+              <p></p>
+              {{ pp.descript }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Alumni - Master</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% assign sortedAlumniMaster = site.data.member-alumni-master | sort: "gd_year"%}
+          {% for pp in sortedAlumniMaster %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{pp.image}}" alt="No image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{pp.name}} • class {{ pp.gd_year }}</h3>
+              <br>
+              {% if pp.email %}
+              <a href="mailto:{{pp.email}}">email</a> /
+              {% endif %}
+              {% if pp.website %}
+              <a href="{{pp.website}}">website</a> /
+              {% endif %}
+              {% if pp.descript %}
+              <p></p>
+              {{ pp.descript }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+
+
+
+
+
+
+
+
+        <br>
+        <br>
+        <br>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:center;font-size:small;">
+Adapted from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman's fork</a> of <a style="font-size:small;" href="https://jonbarron.info">John Barron's website</a>.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+

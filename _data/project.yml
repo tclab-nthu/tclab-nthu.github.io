@@ -1,0 +1,10 @@
+- title:  "NTHU Route 2.0"
+  time:   Oct. 2008
+  image: http://www.cs.nthu.edu.tw/~tcwang/nthuroute/ispd08grcontestaward.png
+  website: http://www.cs.nthu.edu.tw/~tcwang/nthuroute/
+  descript: |
+    NTHU-Route 2.0 is a fast and stable global router. It improves the solution quality and runtime of NTHU-Route by the following enhancements:
+    1. a new history based cost function,
+    2. new ordering methods for congested region identification and rip-up and reroute, and
+    3. two implementation oriented techniques.
+    At the ISPD 2008 Global Routing Contest, NTHU-Route 2.0 generated the best solutions for 11 of 16 benchmarks among all participating global routers and won the 1st place.
