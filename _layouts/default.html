@@ -292,13 +292,14 @@
           </tr>
         </table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          {% for pp in site.data.member-alumni-phd %}
+          {% assign sortedAlumniPhD = site.data.member-alumni-phd | sort: "gd_year"%}
+          {% for pp in sortedAlumniPhD reversed %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="{{pp.image}}" alt="No image" style="width:auto; height:auto; max-width:100%;border-radius:50%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{pp.name}}</h3>
+              <h3>{{pp.name}} • graduated in {{ pp.gd_year }}</h3>
               <br>
               {% if pp.email %}
               <a href="mailto:{{pp.email}}">email</a> /
@@ -324,7 +325,7 @@
         </table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           {% assign sortedAlumniMaster = site.data.member-alumni-master | sort: "gd_year"%}
-          {% for pp in sortedAlumniMaster %}
+          {% for pp in sortedAlumniMaster reversed%}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="{{pp.image}}" alt="No image" style="width:auto; height:auto; max-width:100%;border-radius:50%;" />
