@@ -1,15 +1,4 @@
-- name: 周伯宇
-  image: https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/349323829_607706964643216_3330265408837076211_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=KMjI90Vx3MAAX-heNlc&_nc_ht=scontent-tpe1-1.xx&oh=00_AfAyFAA_aR6yhvzQ4ff5VsGdo6kOMAcf2Oc4IjcICDM0kw&oe=650B14D1
-  ad_year: 2021
-  email: someman1206@gmail.com
-- name: 廖恩宇
-  image: https://scontent-tpe1-1.xx.fbcdn.net/v/t31.18172-8/21950932_1965959413672805_3201979442803783745_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=HW3iZLinmrgAX-Ze-Lx&_nc_ht=scontent-tpe1-1.xx&oh=00_AfDDmyssJ9p9LcEFlQWOAzbH1xbPBdzNs7WrmtUU9akPZQ&oe=652CFC45
-  ad_year: 2021
-  email: danielliaotpe@gmail.com
-- name: 陳以祐
-  image: https://scontent-tpe1-1.xx.fbcdn.net/v/t31.18172-8/13908929_692725854217189_7452935896363158849_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JsW6KOLNmYMAX8FnaXS&_nc_ht=scontent-tpe1-1.xx&oh=00_AfBykK-hlSIvdy0j2A6IdRrzwfejw6yLW5Nme8fZYVTCeQ&oe=652D080B
-  ad_year: 2021
-  email: ian87922@gmail.com
+
 - name: 謝旻峰
   image: https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/74614147_2131981367097450_8250514188569411584_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=vOM5thTMeC4AX--TNXJ&_nc_ht=scontent-tpe1-1.xx&oh=00_AfAchyPgG8a3_81yfD7_eZEntc0t3AQAH7VzRs2i_0c58Q&oe=652D1EC4
   ad_year: 2022
@@ -34,10 +23,3 @@
   image: https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-1/346781037_150391217867567_929443743893271091_n.jpg?stp=cp6_dst-jpg_p320x320&_nc_cat=107&ccb=1-7&_nc_sid=fe8171&_nc_ohc=FO5EHHTq9lgAX8s0EtU&_nc_ht=scontent-tpe1-1.xx&oh=00_AfC6aQS9W5NKJ6UFEwjfcoeNuPN7zdUULUE8eLN3ZBprSQ&oe=650A943C
   ad_year: 2022
   email: s95209louie@gmail.com
-- name: 陳博暐
-  image: https://avatars.githubusercontent.com/u/44916048?v=4
-  ad_year: 2022
-  website: https://bwbwchen.github.io/
-  email: tim.chenbw@gmail.com
-  descript: Hi!
-
